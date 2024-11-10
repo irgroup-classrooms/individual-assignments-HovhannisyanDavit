@@ -30,8 +30,8 @@ Hi, I'm a student of Data and Information Science at TH Köln, currently working
 ---
 
 ## Inspirational Quote
-> "Data is the new oil." 
-> "Don't wait for an opportunity. Create it!"
+> "Data is the new oil."
+>  "Don't wait for an opportunity. Create it!"
 ---
 
 ## Code Snippet
