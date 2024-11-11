@@ -1,11 +1,11 @@
 # Linux Journey - Assessment Documentation
 
 
-**##1. The Shell**
-**###Description: The shell is a command-line interface that allows users to interact with the operating system by typing commands. Commonly accessed through "Terminal" or "Console" programs, the shell interprets and runs commands you provide.**
-**###Usage:**
+## 1. The Shell
+**Description:** The shell is a command-line interface that allows users to interact with the operating system by typing commands. Commonly accessed through "Terminal" or "Console" programs, the shell interprets and runs commands you provide.
+### Usage:
 $ echo Hello World
-**###Quiz:**
+### Quiz:
 Question: What should be outputted to the display when you type echo Hello World?
 Answer: Hello World
 
