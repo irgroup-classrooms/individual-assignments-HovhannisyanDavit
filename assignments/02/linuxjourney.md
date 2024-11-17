@@ -14,8 +14,8 @@ Answer: Hello World
 ### Usage:
 $ pwd
 ### Quiz:
-Question: How do I find what directory you are currently in?
-Answer: pwd
+Question: How do I find what directory you are currently in? 
+</br>Answer: pwd
 
 # 3. cd (Change Directory)
 ### Description: The cd command lets you change your current directory. You can use both absolute and relative paths to navigate.
