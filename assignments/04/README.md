@@ -12,7 +12,10 @@ You can add your command line in- and outputs directly to this README file. Alte
 
 1. Extract all email addresses from the text.
 ``` 
-
+grep -oP '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b' "C:\Users\user\Desktop\TH KÖLN\Semester 5\Daten Modellierung\contacts.csv"
+`grep`: Searches for patterns in text.
+-`o`: Prints only the matching part of each line.
+-`P`: Enables Perl-compatible regular expressions (needed for \b and other advanced regex features).
 ``` 
 2. Extract all phone numbers from the text.
 ``` 
