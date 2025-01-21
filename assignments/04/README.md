@@ -13,6 +13,8 @@ You can add your command line in- and outputs directly to this README file. Alte
 1. Extract all email addresses from the text.
 ``` 
 grep -oP '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b' "C:\Users\user\Desktop\TH KÖLN\Semester 5\Daten Modellierung\contacts.csv"
+
+Comment:
 grep: Searches for patterns in text.
 -o: Prints only the matching part of each line.
 -P: Enables Perl-compatible regular expressions (needed for \b and other advanced regex features).
@@ -20,6 +22,8 @@ grep: Searches for patterns in text.
 2. Extract all phone numbers from the text.
 ``` 
 grep -oP '\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}' "C:\Users\user\Desktop\TH KÖLN\Semester 5\Daten Modellierung\contacts.csv"
+
+Comment:
 \(?: Matches an optional opening parenthesis (.
 \d{3}: Matches exactly three digits.
 [-.\s]?: Matches an optional separator (dash, dot, or space).
@@ -28,12 +32,16 @@ grep -oP '\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}' "C:\Users\user\Desktop\TH KÖLN\S
 3. Extract all names that start with the letter ‘J’.
 ``` 
 grep -oP '\bJ[A-Za-z]+\b' "C:\Users\user\Desktop\TH KÖLN\Semester 5\Daten Modellierung\contacts.csv"
+
+Comment:
 \bJ: Matches a word boundary followed by J.
 [A-Za-z]+: Matches one or more alphabetical characters.
 ``` 
 4. Extract all street names that contain the word 'St'.
 ``` 
 grep -oP '\b[A-Za-z\s]*St[A-Za-z\s]*\b' "C:\Users\user\Desktop\TH KÖLN\Semester 5\Daten Modellierung\contacts.csv"
+
+Comment:
 \b: Ensures we match full words.
 [A-Za-z\s]*: Matches a sequence of letters and spaces around "St".
 
@@ -41,16 +49,22 @@ grep -oP '\b[A-Za-z\s]*St[A-Za-z\s]*\b' "C:\Users\user\Desktop\TH KÖLN\Semester
 5. Extract all addresses in ‘USA’.
 ``` 
 grep 'USA' "C:\Users\user\Desktop\TH KÖLN\Semester 5\Daten Modellierung\contacts.csv"
+
+Comment:
 This simple pattern searches for any line containing "USA".
 ``` 
 6. Extract the last names of all people.
 ``` 
 grep -oP '\b[A-Za-z]+\s\K[A-Za-z]+' contacts.csv
+
+Comment:
 Assuming the last names appear after the first name and are separated by a space: Regex: \b[A-Za-z]+\s([A-Za-z]+)\b
 ``` 
 7. Extract all email domains (part after the @ sign).
 ``` 
 grep -oP '@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' contacts.csv | sed 's/@//'
+
+Comment:
 @: Matches the literal '@' symbol.
 [A-Za-z0-9.-]+: Matches one or more characters that can be letters (uppercase or lowercase), digits, dots, or hyphens (valid domain characters).
 \.: Matches the literal dot (.) symbol.
@@ -59,6 +73,8 @@ grep -oP '@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' contacts.csv | sed 's/@//'
 8.	Extract all instances of the first name ‘David’ along with their full address (street and city).
 ``` 
 grep -oP 'David\s[A-Za-z\s]+,[A-Za-z\s]+' contacts.csv
+
+Comment:
 \s: Matches a single whitespace character (space between name and address).
 [A-Za-z\s]+: Matches one or more letters (first part of the address, including spaces).
 ,: Matches the literal comma separating name and address.
@@ -67,6 +83,8 @@ grep -oP 'David\s[A-Za-z\s]+,[A-Za-z\s]+' contacts.csv
 9.	Find all entries where the phone number ends with ‘7’.
 ``` 
 grep -oP '\d{3}[-.\s]?\d{3}[-.\s]?\d{3}7\b' contacts.csv
+
+Comment:
 \d{3}: Matches exactly three digits (for the area code or first part of the phone number).
 [-.\s]?: Matches an optional separator (dash, dot, or space).
 \d{3}: Matches exactly three digits (for the second part of the phone number).
@@ -78,6 +96,8 @@ grep -oP '\d{3}[-.\s]?\d{3}[-.\s]?\d{3}7\b' contacts.csv
 10.	Extract all instances of first names that end with the letter 'e'.
 ``` 
 grep -oP '\b[A-Za-z]*e\b' contacts.csv
+
+Comment:
 \b: Asserts a word boundary (ensures that we're matching full words).
 [A-Za-z]*: Matches zero or more alphabetic characters (letters, both uppercase and lowercase).
 e: Matches the letter 'e' (the last character of the first name).
